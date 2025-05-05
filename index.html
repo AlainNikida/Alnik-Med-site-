@@ -1,41 +1,48 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="fr">  
 <head>  
   <meta charset="UTF-8" />  
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
-  <title>Alnik Med – Soins de santé à domicile</title>  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">  
+  <title>Alnik Med -- Soins de santé à domicile</title>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>  
     body {  
       margin: 0;  
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
       background: linear-gradient(to bottom right, #e0f7fa, #d0f8ce, #fff9c4);  
       color: #333;  
-    }  
+    }
+    
     header {  
       background-color: #004d40;  
       color: white;  
       padding: 2rem;  
       text-align: center;  
     }  
+
     header h1 {  
       font-size: 2.8rem;  
       margin-bottom: 0.5rem;  
     }  
+
     header p {  
       font-size: 1.1rem;  
       margin-top: 0.5rem;  
     }  
+
     .hero {  
       background: url('https://via.placeholder.com/1200x400') no-repeat center/cover;  
       padding: 4rem 2rem;  
       text-align: center;  
       color: white;  
     }  
+
     .hero h1 {  
       font-size: 2.5rem;  
       margin-bottom: 1rem;  
     }  
+
     .services {  
       display: grid;  
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
@@ -44,6 +51,7 @@
       max-width: 1000px;  
       margin: auto;  
     }  
+
     .service-card {  
       background-color: white;  
       border: 1px solid #ccc;  
@@ -55,29 +63,37 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
       transition: transform 0.2s;  
     }  
+
     .service-card:hover {  
       transform: translateY(-5px);  
     }  
+
     .cta {  
       text-align: center;  
-      margin-top: 2rem;  
+      margin-top: 2rem;
+      display: inline-block;
     }  
+
     .cta a {  
       background-color: #00796b;  
       color: white;  
       padding: 1rem 2rem;  
       text-decoration: none;  
-      border-radius: 5px;  
+      border-radius: 5px;
+      display: inline-block;
     }  
+
     .cta a:hover {  
       background-color: #004d40;  
     }  
+
     footer {  
       background-color: #eee;  
       text-align: center;  
       padding: 1rem;  
       font-size: 0.9rem;  
     }  
+
     .whatsapp-btn {  
       position: fixed;  
       bottom: 20px;  
@@ -92,48 +108,71 @@
       z-index: 100;  
       cursor: pointer;  
     }  
+
     @media (max-width: 600px) {  
       .hero h1 {  
         font-size: 1.8rem;  
       }  
     }  
+
     .section {  
       padding: 2rem;  
       text-align: center;  
     }  
+
     .section img {  
       max-width: 100%;  
       height: auto;  
       margin: 1rem 0;  
     }  
+
     .section ul {  
       list-style-type: none;  
       padding-left: 0;  
     }  
+
     .section ul li {  
       margin-bottom: 0.5rem;  
-    }  
+    }
+
+    /* CSS pour le mode sombre */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(to bottom right, #002b36, #073642, #002b36);
+        color: #eee;
+      }
+
+      .service-card {
+        background-color: #073642;
+        border-color: #586e75;
+        color: #eee;
+      }
+
+      footer {
+        background-color: #002b36;
+        color: #eee;
+      }
+    }
   </style>  
 </head>  
-<body>  
-
+<body>
   <header>  
     <h1>Alnik Med</h1>  
     <p>Soins de santé à domicile, accessibles et professionnels</p>  
-  </header>  
-
+  </header>
+    
   <section class="hero" style="background-color: #f44336;">  
     <h1>Des soins de santé directement chez vous</h1>  
-    <p>Infirmiers, médecins, tests, consultations en ligne – tout à portée de main !</p>  
-  </section>  
-
+    <p>Infirmiers, médecins, tests, consultations en ligne -- tout à portée de main !</p>  
+  </section>
+    
   <section class="services">  
     <a href="#prélèvements" class="service-card">  
       <h3>Prélèvements à domicile</h3>  
       <i class="fas fa-flask fa-3x"></i>  
       <p>Sanguins, vaginaux, urinaires et autres, tout chez vous.</p>  
     </a>  
-    <a href="#consultation-en-ligne" class="service-card">  
+    <a href="#examens" class="service-card">  
       <h3>Consultation en ligne</h3>  
       <i class="fas fa-video fa-3x"></i>  
       <p>Consultez un médecin gratuitement, partout, tout le temps.</p>  
@@ -145,7 +184,7 @@
     </a>  
     <a href="#conseils-psychiatriques" class="service-card">  
       <h3>Conseils psychiatriques</h3>  
-      <i class="fas fa-head-side-brain fa-3x"></i>  
+      <i class="fas fa-brain fa-3x"></i>  
       <p>Un soutien mental accessible et confidentiel.</p>  
     </a>  
     <a href="#education-sexuelle" class="service-card">  
@@ -158,26 +197,26 @@
       <i class="fas fa-syringe fa-3x"></i>  
       <p>Traitements à domicile pour maladies chroniques et aiguës.</p>  
     </a>  
-  </section>  
-
+  </section>
+    
   <section class="cta">  
     <a href="https://wa.me/237694795304" target="_blank">Prenez rendez-vous sur WhatsApp</a>  
-  </section>  
-
+  </section>
+    
   <footer>  
     &copy; 2025 Alnik Med. Tous droits réservés.  
-  </footer>  
+  </footer>
 
   <a href="https://wa.me/237694795304" target="_blank" class="whatsapp-btn">📲</a>
 
-  <!-- Services détaillés -->  
+  <!-- Services détaillés -->    
   <section id="consultation-en-ligne" class="section">  
     <h1>Consultation en ligne</h1>  
     <i class="fas fa-video fa-3x"></i>  
     <p>Obtenez un avis médical professionnel sans vous déplacer. Disponibilité 24h/24, 7j/7.</p>  
     <a href="https://wa.me/237694795304" target="_blank" class="cta">Commencer une consultation</a>  
-  </section>  
-
+  </section>
+    
   <section id="tests-rapides" class="section">  
     <h1>Tests rapides à domicile</h1>  
     <i class="fas fa-procedures fa-3x"></i>  
@@ -189,41 +228,55 @@
     </ul>  
     <p>Des résultats rapides et fiables directement chez vous.</p>  
     <a href="https://wa.me/237694795304" target="_blank" class="cta">Demander un test rapide</a>  
-  </section>  
-
+  </section>
+    
   <section id="conseils-psychiatriques" class="section">  
     <h1>Conseils psychiatriques</h1>  
-    <i class="fas fa-head-side-brain fa-3x"></i>  
-    <p>Notre équipe est à l’écoute pour offrir un soutien émotionnel et mental discret, sans jugement.</p>  
+    <i class="fas fa-brain fa-3x"></i>  
+    <p>Notre équipe est à l'écoute pour offrir un soutien émotionnel et mental discret, sans jugement.</p>  
     <a href="https://wa.me/237694795304" target="_blank" class="cta">Parler à un conseiller</a>  
-  </section>  
-
+  </section>
+    
   <section id="education-sexuelle" class="section">  
     <h1>Éducation sexuelle</h1>  
     <i class="fas fa-chalkboard-teacher fa-3x"></i>  
     <p>Sessions éducatives adaptées à tous pour une sexualité responsable, saine et épanouie.</p>  
     <a href="https://wa.me/237694795304" target="_blank" class="cta">Participer à une session</a>  
-  </section>  
-
+  </section>
+    
   <section id="soins-perfusions" class="section">  
     <h1>Soins et perfusions</h1>  
     <i class="fas fa-syringe fa-3x"></i>  
     <p>Nos équipes assurent la prise en charge à domicile : perfusions, traitements chroniques, suivis médicaux personnalisés.</p>  
     <a href="https://wa.me/237694795304" target="_blank" class="cta">Organiser une visite</a>  
-  </section>  
+  </section>
 
-  <!-- Tawk.to Chat Widget -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function() {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/662f1fb0a0c6737bd12e7e35/1hshmr1gl';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
+  <script>
+    // Détection du mode sombre
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      if (event.matches) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    });
   </script>
-
+  
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/681943ca5510d619105dc932/1iqhb1l1g';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>  
 </html>
